@@ -8,7 +8,6 @@ const SectionTitle = ({ title }: Props) => (
   <Heading
     as="h2"
     color="#04041c"
-    textAlign="center"
     fontFamily="Avenir"
     fontWeight="normal"
     fontSize={{ base: "24px", sm: "40px", md: "54px" }}

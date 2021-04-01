@@ -18,7 +18,7 @@ const Heading = () => {
       <Box
         color="#fbfaf5"
         pos="absolute"
-        top={{ base: "35%", md: "45%", xl: "38%" }}
+        top={{ base: "72px", sm: "84px", md: "45vh", xl: "38vh" }}
         left="50%"
         transform={{
           base: "translateY(-40px) translateX(-50%)",

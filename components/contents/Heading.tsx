@@ -17,7 +17,7 @@ const Heading = () => {
   return (
     <Box bg="mainColor.5" height={{ base: "160px", sm: "220px", md: "100vh" }}>
       <Box
-        color="#fbfaf5"
+        color="mainColor.1"
         pos="absolute"
         top={{ base: "72px", sm: "84px", md: "45vh", xl: "38vh" }}
         left="50%"

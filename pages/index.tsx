@@ -3,6 +3,7 @@ import { Box, Center } from "@chakra-ui/layout";
 
 import Heading from "components/contents/Heading";
 import About from "components/contents/About";
+import Skills from "components/contents/Skills";
 
 const Home: NextPage = () => {
   return (
@@ -16,6 +17,7 @@ const Home: NextPage = () => {
           textAlign="center"
         >
           <About />
+          <Skills />
         </Box>
       </Center>
     </>

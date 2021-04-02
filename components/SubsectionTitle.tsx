@@ -8,10 +8,10 @@ const SubsectionTitle = ({ title }: Props) => {
   return (
     <Heading
       as="h3"
-      color="mainColor.5"
+      color="mainColor.4"
       fontFamily="Avenir"
       fontWeight="normal"
-      fontSize={{ base: "20px", sm: "28px", md: "40px" }}
+      fontSize={{ base: "20px", sm: "28px", md: "36px" }}
       margin="32px auto"
     >
       {title}

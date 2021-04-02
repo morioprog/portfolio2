@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Box, Grid, GridItem } from "@chakra-ui/layout";
-import HeaderParticles from "components/HeaderParticles";
+import { HeaderParticlesPolygon } from "components/HeaderParticles";
 import Typist from "react-typist";
 
 const Heading = () => {
@@ -14,7 +14,7 @@ const Heading = () => {
   ];
 
   return (
-    <Box bg="#04041c" height={{ base: "160px", sm: "220px", md: "100vh" }}>
+    <Box bg="mainColor.5" height={{ base: "160px", sm: "220px", md: "100vh" }}>
       <Box
         color="#fbfaf5"
         pos="absolute"
@@ -66,7 +66,7 @@ const Heading = () => {
           </GridItem>
         </Grid>
       </Box>
-      <HeaderParticles />
+      <HeaderParticlesPolygon />
     </Box>
   );
 };

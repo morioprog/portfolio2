@@ -1,13 +1,27 @@
-import { Box, Grid, GridItem, HStack } from "@chakra-ui/react";
+import { Box, Grid, GridItem, Heading, HStack, Text } from "@chakra-ui/react";
 import { FaUser, FaBirthdayCake } from "react-icons/fa";
 import { MdMyLocation } from "react-icons/md";
 
 import SectionTitle from "components/SectionTitle";
+import SubsectionTitle from "components/SubsectionTitle";
+import BorderCard from "components/BorderCard";
 
 type AboutType = {
   icon: React.ReactElement;
   attribute: string;
   value: string;
+};
+
+type EducationType = {
+  dateFrom: string;
+  dateTo?: string;
+  name: string;
+  location: string;
+  description: string;
+  gpa?: number;
+  maxGpa?: number;
+  info?: string;
+  link?: string;
 };
 
 const About = () => {
@@ -26,6 +40,27 @@ const About = () => {
       icon: <MdMyLocation />,
       attribute: "Location",
       value: "Tokyo, Japan",
+    },
+  ];
+
+  const educations: EducationType[] = [
+    {
+      dateFrom: "April 2017",
+      dateTo: "March 2021",
+      name: "Keio University",
+      location: "Kanagawa, Japan",
+      description: "Bachelor of Information and Computer Science",
+      gpa: 3.81,
+      maxGpa: 4.0,
+      info: "Graduated at the top of the department",
+      link: "https://www.st.keio.ac.jp/departments/faculty/ics.html",
+    },
+    {
+      dateFrom: "April 2021",
+      name: "Keio University",
+      location: "Kanagawa, Japan",
+      description: "Graduate School of Science and Technology",
+      link: "https://www.st.keio.ac.jp/departments/open/",
     },
   ];
 
@@ -67,6 +102,45 @@ const About = () => {
             >
               {about.value}
             </GridItem>
+          </>
+        ))}
+      </Grid>
+      <SubsectionTitle title="Educations" />
+      <Grid
+        templateRows={{ base: "repeat(2, 1fr)", xl: "repeat(1, 1fr)" }}
+        templateColumns={{ base: "repeat(1, 1fr)", xl: "repeat(2, 1fr)" }}
+        gap={4}
+      >
+        {educations.map((education, idx) => (
+          <>
+            <BorderCard color="#fdd001" fontFamily="Avenir" key={idx}>
+              <Heading
+                as="h3"
+                fontFamily="Avenir"
+                fontWeight="normal"
+                fontSize={{ base: "18px", sm: "22px", md: "26px" }}
+              >
+                {education.dateFrom} - {education.dateTo ?? "Present"}
+              </Heading>
+              <Text
+                paddingTop="8px"
+                fontSize={{ base: "14px", sm: "16px", md: "20px" }}
+              >
+                <b>{education.name}</b> ({education.location})
+              </Text>
+              <Text fontSize={{ base: "14px", md: "18px" }}>
+                {education.description}
+              </Text>
+              <Text fontSize={{ base: "14px", md: "18px" }} paddingTop="8px">
+                <u>Overall GPA</u> <b>{education.gpa?.toFixed(2) ?? "-"}</b> /{" "}
+                {education.maxGpa?.toFixed(2) ?? "-"}
+              </Text>
+              {education.info && (
+                <Text fontSize={{ base: "14px", md: "18px" }}>
+                  ({education.info})
+                </Text>
+              )}
+            </BorderCard>
           </>
         ))}
       </Grid>

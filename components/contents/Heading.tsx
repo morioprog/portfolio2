@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { chakra } from "@chakra-ui/react";
 import { Box, Grid, GridItem } from "@chakra-ui/layout";
 import { HeaderParticlesPolygon } from "components/HeaderParticles";
 import Typist from "react-typist";
@@ -57,9 +58,9 @@ const Heading = () => {
               onTypingDone={() => setTypistIndex(typistIndex + 1)}
             >
               {interests.map((interest) => [
-                <span style={{ padding: "2px", backgroundColor: "#00587a" }}>
+                <chakra.span py="1" bg="mainColor.4">
                   {interest}
-                </span>,
+                </chakra.span>,
                 <Typist.Backspace count={interest.length} delay={2000} />,
               ])}
             </Typist>

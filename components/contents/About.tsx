@@ -106,44 +106,50 @@ const About = () => {
         ))}
       </Grid>
       <SubsectionTitle title="Educations" />
-      <Grid
-        templateRows={{ base: "repeat(2, 1fr)", xl: "repeat(1, 1fr)" }}
-        templateColumns={{ base: "repeat(1, 1fr)", xl: "repeat(2, 1fr)" }}
-        gap={4}
+      <Box
+        marginLeft="auto"
+        marginRight="auto"
+        width={{ base: "95%", xl: "65vw" }}
       >
-        {educations.map((education, idx) => (
-          <>
-            <BorderCard color="#fdd001" fontFamily="Avenir" key={idx}>
-              <Heading
-                as="h3"
-                fontFamily="Avenir"
-                fontWeight="normal"
-                fontSize={{ base: "18px", sm: "22px", md: "26px" }}
-              >
-                {education.dateFrom} - {education.dateTo ?? "Present"}
-              </Heading>
-              <Text
-                paddingTop="8px"
-                fontSize={{ base: "14px", sm: "16px", md: "20px" }}
-              >
-                <b>{education.name}</b> ({education.location})
-              </Text>
-              <Text fontSize={{ base: "14px", md: "18px" }}>
-                {education.description}
-              </Text>
-              <Text fontSize={{ base: "14px", md: "18px" }} paddingTop="8px">
-                <u>Overall GPA</u> <b>{education.gpa?.toFixed(2) ?? "-"}</b> /{" "}
-                {education.maxGpa?.toFixed(2) ?? "-"}
-              </Text>
-              {education.info && (
-                <Text fontSize={{ base: "14px", md: "18px" }}>
-                  ({education.info})
+        <Grid
+          templateRows={{ base: "repeat(2, 1fr)", xl: "repeat(1, 1fr)" }}
+          templateColumns={{ base: "repeat(1, 1fr)", xl: "repeat(2, 1fr)" }}
+          gap={4}
+        >
+          {educations.map((education, idx) => (
+            <>
+              <BorderCard color="#fdd001" fontFamily="Avenir" key={idx}>
+                <Heading
+                  as="h3"
+                  fontFamily="Avenir"
+                  fontWeight="normal"
+                  fontSize={{ base: "18px", sm: "22px", md: "26px" }}
+                >
+                  {education.dateFrom} - {education.dateTo ?? "Present"}
+                </Heading>
+                <Text
+                  paddingTop="8px"
+                  fontSize={{ base: "14px", sm: "16px", md: "20px" }}
+                >
+                  <b>{education.name}</b> ({education.location})
                 </Text>
-              )}
-            </BorderCard>
-          </>
-        ))}
-      </Grid>
+                <Text fontSize={{ base: "14px", md: "18px" }}>
+                  {education.description}
+                </Text>
+                <Text fontSize={{ base: "14px", md: "18px" }} paddingTop="8px">
+                  <u>Overall GPA</u> <b>{education.gpa?.toFixed(2) ?? "-"}</b> /{" "}
+                  {education.maxGpa?.toFixed(2) ?? "-"}
+                </Text>
+                {education.info && (
+                  <Text fontSize={{ base: "14px", md: "18px" }}>
+                    ({education.info})
+                  </Text>
+                )}
+              </BorderCard>
+            </>
+          ))}
+        </Grid>
+      </Box>
     </>
   );
 };

@@ -4,6 +4,7 @@ import {
   useBreakpointValue,
   useMediaQuery,
 } from "@chakra-ui/react";
+import { useEffect, useState } from "react";
 
 import { SkillType } from "src/types";
 
@@ -13,7 +14,17 @@ import SkillBar from "components/SkillBar";
 
 const Skills = () => {
   const skillsPerRow = useBreakpointValue({ base: 1, md: 3, xl: 4 }) ?? 1;
+
+  // useMediaQuery - doesn't select the corect state on initial load
+  // https://github.com/chakra-ui/chakra-ui/issues/3124
   const [isMdUp] = useMediaQuery("(min-width: 48em)");
+  const [isMdUpState, setIsMdUpState] = useState(false);
+
+  useEffect(() => {
+    if (isMdUp !== isMdUpState) {
+      setIsMdUpState(isMdUp);
+    }
+  }, [isMdUp]);
 
   const skills: SkillType[] = [
     {
@@ -105,7 +116,7 @@ const Skills = () => {
   return (
     <>
       <SectionTitle title="Skills" />
-      {isMdUp ? (
+      {isMdUpState ? (
         <Grid
           templateRows={`repeat(${Math.floor(
             (skills.length + skillsPerRow - 1) / skillsPerRow

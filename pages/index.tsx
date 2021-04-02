@@ -8,7 +8,7 @@ const Home: NextPage = () => {
   return (
     <>
       <Heading />
-      <Center>
+      <Center bg="mainColor.1">
         <Box
           paddingTop={{ base: "16px", sm: "32px", md: "48px" }}
           paddingBottom="128px"

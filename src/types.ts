@@ -44,3 +44,9 @@ export type ContestType = {
   result?: string;
   link: string;
 };
+
+export type ContactType = {
+  icon: React.ReactElement;
+  color: string;
+  link: string;
+};

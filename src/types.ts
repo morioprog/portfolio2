@@ -12,3 +12,14 @@ export type QualificationType = {
   date: string;
   link: string;
 };
+
+export type WorkExperienceType = {
+  dateFrom: string;
+  dateTo?: string;
+  company: string;
+  location: string;
+  description_ja: string;
+  description_en: string;
+  technologies: string[];
+  link: string;
+};

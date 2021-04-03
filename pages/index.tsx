@@ -5,6 +5,7 @@ import Heading from "components/contents/Heading";
 import About from "components/contents/About";
 import Skills from "components/contents/Skills";
 import Languages from "components/contents/Languages";
+import WorkExperiences from "components/contents/WorkExperiences";
 
 const Home: NextPage = () => {
   return (
@@ -20,6 +21,7 @@ const Home: NextPage = () => {
           <About />
           <Skills />
           <Languages />
+          <WorkExperiences />
         </Box>
       </Center>
     </>

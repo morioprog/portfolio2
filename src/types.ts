@@ -23,3 +23,10 @@ export type WorkExperienceType = {
   technologies: string[];
   link: string;
 };
+
+export type WorkType = {
+  name: string;
+  description: string;
+  technologies: string[];
+  link: string;
+};

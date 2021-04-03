@@ -6,6 +6,7 @@ import About from "components/contents/About";
 import Skills from "components/contents/Skills";
 import Languages from "components/contents/Languages";
 import WorkExperiences from "components/contents/WorkExperiences";
+import Works from "components/contents/Works";
 
 const Home: NextPage = () => {
   return (
@@ -22,6 +23,7 @@ const Home: NextPage = () => {
           <Skills />
           <Languages />
           <WorkExperiences />
+          <Works />
         </Box>
       </Center>
     </>

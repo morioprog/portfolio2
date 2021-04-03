@@ -1,3 +1,21 @@
+export type AboutType = {
+  icon: React.ReactElement;
+  attribute: string;
+  value: string;
+};
+
+export type EducationType = {
+  dateFrom: string;
+  dateTo?: string;
+  name: string;
+  location: string;
+  description: string;
+  gpa?: number;
+  maxGpa?: number;
+  info?: string;
+  link?: string;
+};
+
 export type SkillType = {
   name: string;
   percentage: number;

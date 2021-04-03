@@ -7,23 +7,7 @@ import SectionTitle from "components/SectionTitle";
 import SubsectionTitle from "components/SubsectionTitle";
 import BorderCard from "components/BorderCard";
 
-type AboutType = {
-  icon: React.ReactElement;
-  attribute: string;
-  value: string;
-};
-
-type EducationType = {
-  dateFrom: string;
-  dateTo?: string;
-  name: string;
-  location: string;
-  description: string;
-  gpa?: number;
-  maxGpa?: number;
-  info?: string;
-  link?: string;
-};
+import { AboutType, EducationType } from "src/types";
 
 const About = () => {
   const abouts: AboutType[] = [

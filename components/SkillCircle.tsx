@@ -31,7 +31,7 @@ const SkillCircle = ({ skill }: Props) => (
     <Text fontFamily="Avenir" fontSize={28}>
       {skill.name}
     </Text>
-    <Text fontFamily="Avenir" fontSize={20}>
+    <Text fontFamily="Avenir" fontSize={20} marginTop="0 !important">
       {skill.level}
     </Text>
   </VStack>

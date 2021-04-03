@@ -14,7 +14,7 @@ const SectionTitle = ({ title }: Props) => {
       fontFamily="Avenir"
       fontWeight="normal"
       fontSize={{ base: "24px", sm: "40px", md: "48px" }}
-      margin="32px auto"
+      margin="96px auto 48px"
       _after={{
         display: "block",
         marginLeft: "auto",

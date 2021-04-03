@@ -27,7 +27,7 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }: AppProps) => {
         />
         <meta
           property="og:image"
-          content="https://github.com/morioprog/portfolio2/blob/master/public/icon.jpg?raw=true"
+          content="https://github.com/morioprog/portfolio2/blob/main/public/icon.jpg?raw=true"
         />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content="@morio_prog" />

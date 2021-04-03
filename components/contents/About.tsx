@@ -1,6 +1,7 @@
 import { Box, Grid, GridItem, Heading, HStack, Text } from "@chakra-ui/react";
 import { FaUser, FaBirthdayCake } from "react-icons/fa";
 import { MdMyLocation } from "react-icons/md";
+import React from "react";
 
 import SectionTitle from "components/SectionTitle";
 import SubsectionTitle from "components/SubsectionTitle";
@@ -82,27 +83,17 @@ const About = () => {
         gap={{ base: 1, md: 4 }}
       >
         {abouts.map((about, idx) => (
-          <>
-            <GridItem
-              key={2 * idx}
-              colSpan={1}
-              textAlign="left"
-              fontFamily="Avenir"
-            >
+          <React.Fragment key={idx}>
+            <GridItem colSpan={1} textAlign="left" fontFamily="Avenir">
               <HStack>
                 <Box>{about.icon}</Box>
                 <Box>{about.attribute}</Box>
               </HStack>
             </GridItem>
-            <GridItem
-              key={2 * idx + 1}
-              colSpan={2}
-              textAlign="center"
-              fontFamily="Avenir"
-            >
+            <GridItem colSpan={2} textAlign="center" fontFamily="Avenir">
               {about.value}
             </GridItem>
-          </>
+          </React.Fragment>
         ))}
       </Grid>
       <SubsectionTitle title="Educations" />
@@ -117,8 +108,8 @@ const About = () => {
           gap={4}
         >
           {educations.map((education, idx) => (
-            <>
-              <BorderCard color="#fdd001" fontFamily="Avenir" key={idx}>
+            <React.Fragment key={idx}>
+              <BorderCard color="#fdd001" fontFamily="Avenir">
                 <Heading
                   as="h3"
                   fontFamily="Avenir"
@@ -146,7 +137,7 @@ const About = () => {
                   </Text>
                 )}
               </BorderCard>
-            </>
+            </React.Fragment>
           ))}
         </Grid>
       </Box>

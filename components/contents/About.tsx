@@ -109,34 +109,39 @@ const About = () => {
         >
           {educations.map((education, idx) => (
             <React.Fragment key={idx}>
-              <BorderCard color="#fdd001" fontFamily="Avenir">
-                <Heading
-                  as="h3"
-                  fontFamily="Avenir"
-                  fontWeight="normal"
-                  fontSize={{ base: "18px", sm: "22px", md: "26px" }}
-                >
-                  {education.dateFrom} - {education.dateTo ?? "Present"}
-                </Heading>
-                <Text
-                  paddingTop="8px"
-                  fontSize={{ base: "14px", sm: "16px", md: "20px" }}
-                >
-                  <b>{education.name}</b> ({education.location})
-                </Text>
-                <Text fontSize={{ base: "14px", md: "18px" }}>
-                  {education.description}
-                </Text>
-                <Text fontSize={{ base: "14px", md: "18px" }} paddingTop="8px">
-                  <u>Overall GPA</u> <b>{education.gpa?.toFixed(2) ?? "-"}</b> /{" "}
-                  {education.maxGpa?.toFixed(2) ?? "-"}
-                </Text>
-                {education.info && (
-                  <Text fontSize={{ base: "14px", md: "18px" }}>
-                    ({education.info})
+              <a href={education.link} target="_blank">
+                <BorderCard color="#fdd001" fontFamily="Avenir" height="100%">
+                  <Heading
+                    as="h3"
+                    fontFamily="Avenir"
+                    fontWeight="normal"
+                    fontSize={{ base: "18px", sm: "22px", md: "26px" }}
+                  >
+                    {education.dateFrom} - {education.dateTo ?? "Present"}
+                  </Heading>
+                  <Text
+                    paddingTop="8px"
+                    fontSize={{ base: "14px", sm: "16px", md: "20px" }}
+                  >
+                    <b>{education.name}</b> ({education.location})
                   </Text>
-                )}
-              </BorderCard>
+                  <Text fontSize={{ base: "14px", md: "18px" }}>
+                    {education.description}
+                  </Text>
+                  <Text
+                    fontSize={{ base: "14px", md: "18px" }}
+                    paddingTop="8px"
+                  >
+                    <u>Overall GPA</u> <b>{education.gpa?.toFixed(2) ?? "-"}</b>{" "}
+                    / {education.maxGpa?.toFixed(2) ?? "-"}
+                  </Text>
+                  {education.info && (
+                    <Text fontSize={{ base: "14px", md: "18px" }}>
+                      ({education.info})
+                    </Text>
+                  )}
+                </BorderCard>
+              </a>
             </React.Fragment>
           ))}
         </Grid>

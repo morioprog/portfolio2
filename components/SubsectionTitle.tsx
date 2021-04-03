@@ -12,7 +12,10 @@ const SubsectionTitle = ({ title }: Props) => {
       fontFamily="Avenir"
       fontWeight="normal"
       fontSize={{ base: "20px", sm: "28px", md: "36px" }}
-      margin="64px auto 32px"
+      marginTop={{ base: "32px", md: "64px" }}
+      marginLeft="auto"
+      marginRight="auto"
+      marginBottom={{ base: "16px", md: "32px" }}
     >
       {title}
     </Heading>

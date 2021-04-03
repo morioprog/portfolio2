@@ -7,6 +7,7 @@ import Skills from "components/contents/Skills";
 import Languages from "components/contents/Languages";
 import WorkExperiences from "components/contents/WorkExperiences";
 import Works from "components/contents/Works";
+import CompetitiveProgramming from "components/contents/CompetitiveProgramming";
 
 const Home: NextPage = () => {
   return (
@@ -24,6 +25,7 @@ const Home: NextPage = () => {
           <Languages />
           <WorkExperiences />
           <Works />
+          <CompetitiveProgramming />
         </Box>
       </Center>
     </>

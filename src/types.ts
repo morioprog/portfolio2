@@ -30,3 +30,10 @@ export type WorkType = {
   technologies: string[];
   link: string;
 };
+
+export type CompetitiveProgrammingSite = "AtCoder" | "Codeforces" | "TopCoder";
+
+export type CompetitiveProgrammingType = {
+  name: CompetitiveProgrammingSite;
+  userId: string;
+};

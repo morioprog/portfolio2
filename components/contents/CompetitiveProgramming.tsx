@@ -10,6 +10,9 @@ import {
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 
+import { MdComputer } from "react-icons/md";
+import { IoMdSchool } from "react-icons/io";
+
 import SectionTitle from "components/SectionTitle";
 import BorderCard from "components/BorderCard";
 
@@ -61,28 +64,33 @@ const CompetitiveProgramming = () => {
       date: "November 2018",
       name: "CODE THANKS FESTIVAL 2018",
       link: "https://atcoder.jp/contests/code-thanks-festival-2018",
+      icon: <MdComputer />,
     },
     {
       date: "July 2019",
       name: "ICPC 2019 Asia Yokohama Regional Contest",
       result: "Passed the domestic qualifying round (45th out of 458 teams)",
       link: "https://icpc.iisf.or.jp/2019-yokohama",
+      icon: <IoMdSchool />,
     },
     {
       date: "September 2019",
       name: "第一回日本最強プログラマー学生選手権決勝",
       link: "https://atcoder.jp/contests/jsc2019-final",
+      icon: <MdComputer />,
     },
     {
       date: "January 2020",
       name: "DISCO presents ディスカバリーチャンネル コードコンテスト2020 本戦",
       link: "https://atcoder.jp/contests/ddcc2020-final",
+      icon: <MdComputer />,
     },
     {
       date: "November 2020",
       name: "ICPC 2020 Asia Yokohama Regional Contest",
       result: "Passed the domestic qualifying round (32th out of 297 teams)",
       link: "https://icpc.iisf.or.jp/2020-yokohama",
+      icon: <IoMdSchool />,
     },
   ];
 
@@ -136,7 +144,8 @@ const CompetitiveProgramming = () => {
             {otherContests.map((otherContest, idx) => (
               <VerticalTimelineElement
                 className="vertical-timeline-element--contests"
-                iconStyle={{ background: "#8db596" }}
+                iconStyle={{ background: "#8db596", color: "#ffffff" }}
+                icon={otherContest.icon}
                 key={idx}
               >
                 <a href={otherContest.link} target="_blank">

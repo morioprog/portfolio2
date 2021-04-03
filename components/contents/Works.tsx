@@ -60,9 +60,16 @@ const Works = () => {
     {
       name: "Portfolio",
       description:
-        "このサイトです．落ち着いたデザインを心がけて作っています．卒業研究が落ち着き次第，レスポンシブにする予定です．",
+        "旧ポートフォリオサイトです．デザインはほぼ同じですが，レスポンシブ対応はしていないです．",
       technologies: ["Vue.js", "JavaScript", "SCSS"],
       link: "https://morioprog.github.io/portfolio",
+    },
+    {
+      name: "Portfolio2",
+      description:
+        "このサイトです．旧ポートフォリオサイトをNext.jsに移行しました．落ち着いたデザインを心がけて作っています．",
+      technologies: ["Next.js", "TypeScript", "Chakra UI"],
+      link: "https://portfolio-six-sandy.vercel.app",
     },
     {
       name: "OmnisCode",

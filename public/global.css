@@ -1,3 +1,12 @@
+.vertical-timeline-element-content {
+  transition: 0.3s;
+}
+
+.vertical-timeline-element-content:hover {
+  box-shadow: 0 8px 40px -12px rgba(0, 0, 0, 0.3);
+  transition: 0.3s;
+}
+
 .vertical-timeline-element--contests .vertical-timeline-element-content {
   border-top: 5px solid #8db596;
 }

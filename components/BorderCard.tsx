@@ -13,6 +13,11 @@ const BorderCard = ({ color, children, ...other }: Props) => (
     borderTop={`5px solid ${color}`}
     borderRadius="0.25em"
     padding="16px"
+    transition="0.3s"
+    _hover={{
+      boxShadow: "0 8px 40px -12px rgba(0,0,0,0.3)",
+      transition: "0.3s",
+    }}
     {...other}
   >
     {children}

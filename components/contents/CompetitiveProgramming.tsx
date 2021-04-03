@@ -133,10 +133,11 @@ const CompetitiveProgramming = () => {
       <Box fontFamily="Avenir">
         {isMdUp ? (
           <VerticalTimeline>
-            {otherContests.map((otherContest) => (
+            {otherContests.map((otherContest, idx) => (
               <VerticalTimelineElement
                 className="vertical-timeline-element--contests"
                 iconStyle={{ background: "#8db596" }}
+                key={idx}
               >
                 <a href={otherContest.link} target="_blank">
                   <h2

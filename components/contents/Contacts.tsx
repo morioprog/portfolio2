@@ -35,7 +35,10 @@ const Contacts = () => {
     <>
       <SectionTitle title="Contacts" />
       <Center>
-        <Grid templateColumns={`repeat(${contacts.length} , 1fr)`} gap={8}>
+        <Grid
+          templateColumns={`repeat(${contacts.length} , 1fr)`}
+          gap={{ base: 4, md: 8 }}
+        >
           {contacts.map((contact, idx) => (
             <GridItem key={idx} color="mainColor.4" colSpan={1}>
               <Link

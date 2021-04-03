@@ -1,5 +1,6 @@
 import { ChakraProvider, CSSReset, extendTheme } from "@chakra-ui/react";
 import { AppProps } from "next/dist/next-server/lib/router/router";
+import "public/global.css";
 
 const colors = {
   mainColor: {

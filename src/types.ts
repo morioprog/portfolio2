@@ -37,3 +37,10 @@ export type CompetitiveProgrammingType = {
   name: CompetitiveProgrammingSite;
   userId: string;
 };
+
+export type ContestType = {
+  date: string;
+  name: string;
+  result?: string;
+  link: string;
+};

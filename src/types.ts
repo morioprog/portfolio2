@@ -36,6 +36,7 @@ export type CompetitiveProgrammingSite = "AtCoder" | "Codeforces" | "TopCoder";
 export type CompetitiveProgrammingType = {
   name: CompetitiveProgrammingSite;
   userId: string;
+  link: string;
 };
 
 export type ContestType = {

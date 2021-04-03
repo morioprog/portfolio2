@@ -42,14 +42,17 @@ const CompetitiveProgramming = () => {
     {
       name: "AtCoder",
       userId: "morio__",
+      link: "https://atcoder.jp/users/morio__",
     },
     {
       name: "Codeforces",
       userId: "morio__",
+      link: "https://codeforces.com/profile/morio__",
     },
     {
       name: "TopCoder",
       userId: "morio__",
+      link: "https://www.topcoder.com/members/morio__",
     },
   ];
 
@@ -98,29 +101,31 @@ const CompetitiveProgramming = () => {
       <Grid templateColumns={`repeat(${sitesPerRow}, 1fr)`} gap={4}>
         {accounts.map((account, idx) => (
           <GridItem key={idx}>
-            <BorderCard color={data[apiQueries[account.name]].color}>
-              <Text
-                fontWeight={500}
-                fontFamily="Avenir"
-                fontSize={{ base: 16, sm: 22 }}
-              >
-                {account.name}
-              </Text>
-              <HStack
-                fontFamily="Avenir"
-                justify="center"
-                marginTop={{ base: 1, sm: 2 }}
-                fontSize={{ base: 14, sm: 16 }}
-              >
-                <Box>Rating: </Box>
-                <Box
-                  color={data[apiQueries[account.name]].color}
+            <a href={account.link} target="_blank">
+              <BorderCard color={data[apiQueries[account.name]].color}>
+                <Text
                   fontWeight={500}
+                  fontFamily="Avenir"
+                  fontSize={{ base: 16, sm: 22 }}
                 >
-                  {data[apiQueries[account.name]].rating}
-                </Box>
-              </HStack>
-            </BorderCard>
+                  {account.name}
+                </Text>
+                <HStack
+                  fontFamily="Avenir"
+                  justify="center"
+                  marginTop={{ base: 1, sm: 2 }}
+                  fontSize={{ base: 14, sm: 16 }}
+                >
+                  <Box>Rating: </Box>
+                  <Box
+                    color={data[apiQueries[account.name]].color}
+                    fontWeight={500}
+                  >
+                    {data[apiQueries[account.name]].rating}
+                  </Box>
+                </HStack>
+              </BorderCard>
+            </a>
           </GridItem>
         ))}
       </Grid>
@@ -133,16 +138,18 @@ const CompetitiveProgramming = () => {
                 className="vertical-timeline-element--contests"
                 iconStyle={{ background: "#8db596" }}
               >
-                <h2
-                  className="vertical-timeline-element-title"
-                  style={{ fontWeight: 500, fontSize: titleSize }}
-                >
-                  {otherContest.date}
-                </h2>
-                <h3 style={{ marginTop: 16 }}>{otherContest.name}</h3>
-                {otherContest.result && (
-                  <h4 style={{ marginTop: 4 }}>{otherContest.result}</h4>
-                )}
+                <a href={otherContest.link} target="_blank">
+                  <h2
+                    className="vertical-timeline-element-title"
+                    style={{ fontWeight: 500, fontSize: titleSize }}
+                  >
+                    {otherContest.date}
+                  </h2>
+                  <h3 style={{ marginTop: 16 }}>{otherContest.name}</h3>
+                  {otherContest.result && (
+                    <h4 style={{ marginTop: 4 }}>{otherContest.result}</h4>
+                  )}
+                </a>
               </VerticalTimelineElement>
             ))}
           </VerticalTimeline>
@@ -150,19 +157,21 @@ const CompetitiveProgramming = () => {
           <Grid gap={4}>
             {otherContests.map((otherContest, idx) => (
               <GridItem key={idx}>
-                <BorderCard color="#8db596">
-                  <Text fontWeight={500} fontSize={{ base: 16, sm: 20 }}>
-                    {otherContest.date}
-                  </Text>
-                  <Text fontSize={{ base: 16, sm: 18 }} marginTop={2}>
-                    {otherContest.name}
-                  </Text>
-                  {otherContest.result && (
-                    <Text fontSize={{ base: 14, sm: 16 }}>
-                      {otherContest.result}
+                <a href={otherContest.link} target="_blank">
+                  <BorderCard color="#8db596">
+                    <Text fontWeight={500} fontSize={{ base: 16, sm: 20 }}>
+                      {otherContest.date}
                     </Text>
-                  )}
-                </BorderCard>
+                    <Text fontSize={{ base: 16, sm: 18 }} marginTop={2}>
+                      {otherContest.name}
+                    </Text>
+                    {otherContest.result && (
+                      <Text fontSize={{ base: 14, sm: 16 }}>
+                        {otherContest.result}
+                      </Text>
+                    )}
+                  </BorderCard>
+                </a>
               </GridItem>
             ))}
           </Grid>

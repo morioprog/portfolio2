@@ -103,8 +103,8 @@ const About = () => {
         width={{ base: "95%", xl: "65vw" }}
       >
         <Grid
-          templateRows={{ base: "repeat(2, 1fr)", xl: "repeat(1, 1fr)" }}
-          templateColumns={{ base: "repeat(1, 1fr)", xl: "repeat(2, 1fr)" }}
+          templateRows={{ base: "", xl: "repeat(1, 1fr)" }}
+          templateColumns={{ base: "", xl: "repeat(2, 1fr)" }}
           gap={4}
         >
           {educations.map((education, idx) => (

@@ -58,18 +58,18 @@ const Works = () => {
       link: "http://131.113.100.213/~j170222s/webapp/index.php",
     },
     {
-      name: "Portfolio",
+      name: "Portfolio (old)",
       description:
         "旧ポートフォリオサイトです．デザインはほぼ同じですが，レスポンシブ対応はしていないです．",
       technologies: ["Vue.js", "JavaScript", "SCSS"],
       link: "https://morioprog.github.io/portfolio",
     },
     {
-      name: "Portfolio2",
+      name: "Portfolio",
       description:
         "このサイトです．旧ポートフォリオサイトをNext.jsに移行しました．落ち着いたデザインを心がけて作っています．",
       technologies: ["Next.js", "TypeScript", "Chakra UI"],
-      link: "https://portfolio-six-sandy.vercel.app",
+      link: "https://github.com/morioprog/portfolio_nextjs",
     },
     {
       name: "OmnisCode",

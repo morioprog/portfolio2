@@ -34,6 +34,17 @@ const WorkExperiences = () => {
       technologies: ["Vue.js", "JavaScript", "Swagger", "Firebase"],
       link: "https://www.e-seikatsu.info",
     },
+    {
+      dateFrom: "April 2021",
+      company: "pixiv",
+      location: "Tokyo, Japan",
+      description_ja:
+        "BOOTHというサービスの開発チームに参加し，既存コードのリファクタリングと新機能の開発を行いました．",
+      description_en:
+        "BOOTHというサービスの開発チームに参加し，既存コードのリファクタリングと新機能の開発を行いました．",
+      technologies: ["Ruby on Rails", "Vue.js", "TypeScript"],
+      link: "https://www.pixiv.co.jp",
+    },
   ];
 
   return (

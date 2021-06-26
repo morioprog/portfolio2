@@ -25,7 +25,7 @@ const Languages = () => {
   const langsPerRow = useBreakpointValue({
     base: 1,
     sm: 2,
-    xl: 4,
+    xl: 3,
   });
 
   const languageAssets: {
@@ -94,6 +94,11 @@ const Languages = () => {
       date: "March 2019",
       link: "https://www.ets.org/jp/toefl/test-takers",
     },
+    {
+      name: "応用情報技術者試験",
+      date: "April 2021",
+      link: "https://www.jitec.ipa.go.jp/1_11seido/ap.html",
+    },
   ];
 
   return (
@@ -126,7 +131,7 @@ const Languages = () => {
             <a href={qualification.link} target="_blank">
               <BorderCard
                 color={
-                  languageAssets?.[qualification?.language]?.color ?? "red"
+                  languageAssets?.[qualification.language!]?.color ?? "#BBBFCA"
                 }
                 height="100%"
               >

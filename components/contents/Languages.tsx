@@ -77,12 +77,6 @@ const Languages = () => {
       link: "https://www.eiken.or.jp/eiken",
     },
     {
-      name: "TOEIC, 760",
-      language: "English",
-      date: "May 2013",
-      link: "https://www.iibc-global.org/toeic.html",
-    },
-    {
       name: "Test of Chinese Proficiency, Grade 2",
       language: "Chinese",
       date: "December 2013",
@@ -98,6 +92,12 @@ const Languages = () => {
       name: "応用情報技術者試験",
       date: "April 2021",
       link: "https://www.jitec.ipa.go.jp/1_11seido/ap.html",
+    },
+    {
+      name: "TOEIC, 940",
+      language: "English",
+      date: "June 2021",
+      link: "https://www.iibc-global.org/toeic.html",
     },
   ];
 

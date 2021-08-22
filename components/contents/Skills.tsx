@@ -56,20 +56,6 @@ const Skills = () => {
       src: "/imgs/skills/typescript.png",
     },
     {
-      name: "Ruby",
-      percentage: 40,
-      color: "#d0311b",
-      level: "Elementary",
-      src: "/imgs/skills/ruby.png",
-    },
-    {
-      name: "Java",
-      percentage: 40,
-      color: "#2192ca",
-      level: "Elementary",
-      src: "/imgs/skills/java.png",
-    },
-    {
       name: "Vue.js",
       percentage: 55,
       color: "#3eba84",
@@ -84,20 +70,6 @@ const Skills = () => {
       src: "/imgs/skills/react.png",
     },
     {
-      name: "Ruby on Rails",
-      percentage: 40,
-      color: "#cc0000",
-      level: "Elementary",
-      src: "/imgs/skills/rails.png",
-    },
-    {
-      name: "Streamlit",
-      percentage: 60,
-      color: "#ff4a49",
-      level: "Intermediate",
-      src: "/imgs/skills/streamlit.png",
-    },
-    {
       name: "Git",
       percentage: 60,
       color: "#f05033",
@@ -106,7 +78,7 @@ const Skills = () => {
     },
     {
       name: "GitHub",
-      percentage: 70,
+      percentage: 60,
       color: "#161614",
       level: "Advanced",
       src: "/imgs/skills/github.png",

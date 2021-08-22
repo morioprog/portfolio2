@@ -3,6 +3,7 @@ import { useBreakpointValue } from "@chakra-ui/media-query";
 
 import BorderCard from "components/BorderCard";
 import SectionTitle from "components/SectionTitle";
+import { m } from "framer-motion";
 
 import { WorkExperienceType } from "src/types";
 
@@ -44,6 +45,18 @@ const WorkExperiences = () => {
         "BOOTHというサービスの開発チームに参加し，既存コードのリファクタリングと新機能の開発を行いました．",
       technologies: ["Ruby on Rails", "Vue.js", "TypeScript"],
       link: "https://www.pixiv.co.jp",
+    },
+    {
+      dateFrom: "July 2021",
+      dateTo: "November 2021",
+      company: "Google Japan",
+      location: "Tokyo, Japan",
+      description_ja:
+        "Google Assistantのチームにインターンとして参加しております．",
+      description_en:
+        "Google Assistantのチームにインターンとして参加しております．",
+      technologies: [],
+      link: "https://about.google/",
     },
   ];
 

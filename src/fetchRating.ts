@@ -9,7 +9,7 @@ export const apiQueries: {
 };
 
 export const apiUrl = (accounts: CompetitiveProgrammingType[]) =>
-  "http://kyopro-ratings.jp1.su8.run/json?" +
+  "/api/json?" +
   accounts
     .map(
       (account) =>

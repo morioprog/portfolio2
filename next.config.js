@@ -11,4 +11,12 @@ module.exports = {
     };
     return config;
   },
+  async rewrites() {
+    return [
+      {
+        source: '/api/:path*',
+        destination: 'http://kyopro-ratings.jp1.su8.run/:path*',
+      }
+    ]
+  }
 };

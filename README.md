@@ -1,5 +1,5 @@
 <h1 align="center">
-  <a href="https://blog.morio.dev/">
+  <a href="https://portfolio.morio.dev/">
     Portfolio
   </a>
 </h1>

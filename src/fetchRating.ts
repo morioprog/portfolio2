@@ -9,7 +9,7 @@ export const apiQueries: {
 };
 
 export const apiUrl = (accounts: CompetitiveProgrammingType[]) =>
-  "https://kyopro-ratings.herokuapp.com/json?" +
+  "http://kyopro-ratings.jp1.su8.run/json?" +
   accounts
     .map(
       (account) =>
